@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Content</title>
+    <link rel="stylesheet" href="fonts/webfontkit-20210303-132030/playfair.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Flex + UI/UX +responsive + web fonts -->
+
+    <!-- 
+        1. adaptivitate - sa se adauge optiunea ca in cazul in care macheta este deschisa de pe un telefon orientat ORIZONTAL - chiar dara ecranul e mai lat de 800 - articolele sa apara cate unul in coloana principala
+        2. adaptivitate - pentru dispozitivul tinut VERTICAL si latime mai mica de 720px sa se largeasca containerul principal (e prea mult spatiu in parti)  
+        3. in header (acolo unde e titlul - Latest news), sa se adauge in partea dreapta o pictograma cu ceas din aceasta sursa
+        https://fonts.google.com/icons?icon.query=time, iar intreg-ul header in acest context sa fie trecut in regim de flex
+        4. in regimul de telefon mobil - sa dispara pictograma adaugata la punctul 3
+        5.  OPTIONAL* - utilizand o abordare asemanatoare cu exemplele de "modal" facute anterior, sa se faca asa incat atunci can apasam pe oricare din poze - aceasta sa se deschida intr-un lighbox (iata exemplu facut prin javascript - https://lokeshdhakar.com/projects/lightbox2/) - voi trebuie sa o executati in PUR CSS+HTML
+    
+     -->
+
+ <section class="news">
+     <header> 
+         <!-- h1 si h2 vor avea acelasi font size ptr ca sunt incluse in header  -->
+         <h1>Latest News</h1> 
+         <div class="logo"><i class="material-icons">timer</i> </div>
+         <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, id?</h2>
+        </header>
+
+        <div class="articles">
+            <article>
+                <h2>Main News Title 1</h2>
+                
+                <figure> 
+                    <a href="#lightbox-item-1">
+                        <picture>
+                            <source srcset="images/image_1_lg-smll.jpg"
+                            media="(max-width: 800px)">
+                            <img src="images/image_1_lg.jpg" alt="">
+                      </picture>
+                    </a>
+                    
+                  
+                </figure>
+                <div class="cols">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium repellendus, commodi autem laboriosam ratione reprehenderit cum architecto consequatur animi ipsa numquam temporibus aspernatur repellat ad officiis placeat, accusamus esse veritatis dicta. Praesentium placeat velit voluptatum quidem esse minima, quod voluptatem dolor voluptates corrupti labore nam reiciendis qui ipsam. Quia, corporis.</p>
+                    <p>In perferendis fugiat soluta, odit dolor tempora molestiae enim doloremque at! Quae alias similique id unde esse praesentium autem quasi odit nemo amet. Impedit totam dolores suscipit eveniet sunt! Enim fuga iste deleniti voluptates distinctio, ab maiores, libero tenetur magni exercitationem nobis, alias non deserunt perspiciatis quas labore sed aspernatur!</p>
+                    <p>Laboriosam asperiores eos officiis ullam fugit consequatur aliquid iste animi ipsum, assumenda, nulla velit, eaque corrupti. Id praesentium veniam dolorum cupiditate saepe a temporibus fugit dolorem excepturi modi libero, deserunt delectus unde enim dolor inventore sapiente! Quae, est? Mollitia saepe delectus sequi iusto deserunt doloremque eos, obcaecati repudiandae quod et?</p>
+                    <a href="" class="more">Read more...</a>
+                </div>
+            </article>
+            <article>
+                <h3>News Title 2</h3>
+                <figure><a href="#lightbox-item-2"><img src="images/image_2_lg_prt.jpg" alt=""></a></figure>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat ratione quam veritatis laborum sunt nihil rem cupiditate cum nulla similique cumque odit beatae perspiciatis inventore quia, necessitatibus eaque itaque aut dolor velit. Maxime deserunt fugiat magni neque consequatur natus quos cupiditate voluptas repellat, blanditiis rerum porro laboriosam at. Dicta, adipisci?</p>
+                <p>Blanditiis minima eius in cum, delectus sit officia minus omnis illo, eum, quisquam quia. Quos iste quod accusantium veniam labore assumenda odit et a porro commodi, laudantium saepe ducimus ex eaque sequi. Odio cumque blanditiis velit expedita illum amet aut ad. Fugit facilis ad porro sed doloribus natus. Cumque, fugiat.</p>
+                <p>Illo dolorem temporibus accusantium. Nesciunt magnam dolores sapiente illum illo cumque doloremque? Impedit fuga repellat doloremque eos a commodi obcaecati, odit quidem voluptatibus labore accusamus ullam laboriosam officiis omnis aliquam consectetur aliquid consequatur adipisci perferendis dignissimos odio? Sint hic sit omnis nostrum. Et praesentium porro possimus mollitia doloribus animi vero.</p>
+                <a href="" class="more">Read more...</a>
+            </article>
+            <article>
+                <h3>News Title 3</h3>
+                <figure><a href="#lightbox-item-3"><img src="images/image_3_lg_prt.jpg" alt=""></a></figure>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat inventore molestias ab voluptate autem omnis ut quam officia aliquam adipisci numquam, enim velit illum perferendis provident fuga quisquam, veniam minima. Possimus, atque nobis? Quisquam, ipsa rem laboriosam tempore, doloremque repellat nam, distinctio repudiandae eveniet consectetur soluta sapiente totam recusandae eius!</p>
+                <p>Cum vel dolor sint provident voluptate! Consequatur vel iusto consectetur eligendi totam corporis atque officia necessitatibus impedit eius incidunt vitae, beatae quisquam dolores reiciendis. Rerum asperiores eum autem optio suscipit tempora excepturi eius architecto id voluptates maiores corrupti nisi mollitia sed voluptas consequuntur aperiam ipsam natus, quod repudiandae vero eligendi.</p>
+                <p>Sed non unde earum, quasi ex reiciendis debitis, dolor autem ea dignissimos cupiditate, explicabo tempore officia aliquid nobis optio esse accusantium fugiat cum nihil nesciunt? Aliquam in facere quod consequatur incidunt, aut iste corporis, quos, minima asperiores blanditiis laboriosam autem soluta vel nobis provident culpa. Dicta fuga minima magnam reiciendis.</p>
+                <a href="" class="more">Read more...</a>
+            </article>
+        </div>
+    </section>
+       <!-- lightbox  -->
+    <div class="lightbox-container">
+
+        <!-- lightbox 01 -->
+        <div id="lightbox-item-1" class="lightbox">
+            <div class="lightbox--content">
+                <a href="" class="close"></a>
+                <img src="images/image_1_lg.jpg" alt="">
+                <h3 class="lightbox--content__title">This is the lightbox Title</h3>
+                <p class="lightbox--content__body">This is the description</p>
+            </div>
+       </div>
+
+        <!-- lightbox 02 -->
+        <div id="lightbox-item-2" class="lightbox">
+            <div class="lightbox--content">
+                <a href="" class="close"></a>
+                <img src="images/image_2_lg.jpg" alt="">
+                <h3 class="lightbox--content__title">This is the lightbox Title</h3>
+                <p class="lightbox--content__body">This is the lightbox description</p>
+            </div>
+      </div>
+
+        <!-- lightbox 03 -->
+        <div id="lightbox-item-3" class="lightbox">
+            <div class="lightbox--content">
+                <a href="" class="close"></a>
+                <img src="images/image_3_lg.jpg" alt="">
+                <h3 class="lightbox--content__title">This is the lightbox Title</h3>
+                <p class="lightbox--content__body">This is the lightbox descriptin</p>
+            </div>
+       </div>
+
+
+
+    </div>
+    
+</body>
+</html>
